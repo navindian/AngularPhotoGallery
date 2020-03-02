@@ -1,0 +1,8 @@
+<div *ngFor="let album of albums">
+  <div class="card" (click) = "showPhoto(album.id)">
+    <h2 class="card-title">{{ album.id }}</h2>
+    <div class="card-body">
+      <p class="card-text">{{ album.title }}</p>
+    </div>
+  </div>
+</div>

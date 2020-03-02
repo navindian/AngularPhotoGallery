@@ -1,0 +1,5 @@
+<div class="gallery" *ngFor="let image of data">
+  <img [src]="image.thumbnailUrl" width="300" height="200" (click)="showFullPhoto(image.url)">
+
+  <div class="desc">{{image.title}}</div>
+</div>
