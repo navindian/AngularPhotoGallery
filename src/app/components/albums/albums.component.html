@@ -1,8 +1,19 @@
-<div *ngFor="let album of albums">
-  <div class="card" (click) = "showPhoto(album.id)">
-    <h2 class="card-title">{{ album.id }}</h2>
-    <div class="card-body">
-      <p class="card-text">{{ album.title }}</p>
+<div *ngIf="isLoading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div *ngFor="let album of albums">
+        <div class="card jumbotron" (click)="showPhoto(album.id)">
+          <h3 class="card-title">{{ album.id }}</h3>
+          <div class="card-body">
+            <p class="card-text display-1" style="cursor: pointer;">
+              {{ album.title }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,5 +1,19 @@
-<div class="gallery" *ngFor="let image of data">
-  <img [src]="image.thumbnailUrl" width="300" height="200" (click)="showFullPhoto(image.url)">
+<div *ngIf="isLoading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2"></div>
+    <div class="gallery" *ngFor="let image of data">
+      <img
+        style="cursor: pointer;"
+        [src]="image.thumbnailUrl"
+        width="300"
+        height="200"
+        (click)="showFullPhoto(image.url)"
+      />
 
-  <div class="desc">{{image.title}}</div>
+      <div class="desc">{{ image.title }}</div>
+    </div>
+  </div>
 </div>
