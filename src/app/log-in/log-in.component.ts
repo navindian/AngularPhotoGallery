@@ -45,3 +45,4 @@ export class LogInComponent implements OnInit {
     this.signUpForm.reset();
   }
 }
+//sample change
