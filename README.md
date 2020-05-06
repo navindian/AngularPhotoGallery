@@ -1,65 +1,65 @@
 
 
-Angular Photo Gallery Application
+# Angular Photo Gallery Application
 
-Steps to setup Angular Environment in you system:
-1.	Clone the project:
-    •	Go to the repository page
-    •	Press Clone or Download
-    •	Open in Desktop-open GitHub Desktop
-    •	Give the local path where you want to clone
-    •	Clone
-2.	Open the project folder in VS Code
-3.	If you have angular installed in your machine, Run
-    •	ng v (or) ng --version (to check whether angular is installed)
-    •	npm install (to install node modules)
-    •	ng serve –open (to run the application)
-4.	If you do not have Angular installed in your machine, Run the following commands to setup
-    i.	For Infosys Network:
-        •	You can follow the commands in lex here
-        https://lex.infosysapps.com/viewer/web-module/lex_9265820785721616000?collectionId=lex_auth_01276298015181209618&collectionType=Course&viewMode=RESUME
-    ii.	For Personal Assets:
-        •	To install node visit https://nodejs.org/en/download/ and download
-        •	Run node -v (or) node --version 
-        To check whether node is installed
-        •	Set the environmental path variable 
-        Click on "New" button in "Edit Environment Variable" popup, and enter the path, where NPM is installed
-        for example
-        C:\Users\Logged-In-User-Id\AppData\Roaming\npm
-        •	Now run the following command to install angular cli
-        npm install -g @angular/cli
-5.	If npm install is successful then run 
-	ng serve --open  to execute and open the browser window.
+## Steps to setup Angular Environment in you system:
+1.	Clone the project:<br />
+    i.	 Go to the repository page<br />
+    ii.	 Press Clone or Download<br />
+    iii. Open in Desktop-open GitHub Desktop<br />
+    iv.  Give the local path where you want to clone<br />
+    v.   Clone<br />
+2.	Open the project folder in VS Code<br />
+3.	If you have angular installed in your machine, Run<br />
+    i.   ng v (or) ng --version (to check whether angular is installed)<br />
+    ii.  npm install (to install node modules)<br />
+    iii. ng serve –open (to run the application)<br />
+4.	If you do not have Angular installed in your machine, Run the following commands to setup<br />
+    i.	For Infosys Network:<br />
+        •	You can follow the commands in lex here<br />
+        https://lex.infosysapps.com/viewer/web-module/lex_9265820785721616000?collectionId=lex_auth_01276298015181209618&collectionType=Course&viewMode=RESUME<br />
+    ii.	For Personal Assets:<br />
+        •	To install node visit https://nodejs.org/en/download/ and download<br />
+        •	Run node -v (or) node --version <br />
+        To check whether node is installed<br />
+        •	Set the environmental path variable <br />
+        Click on "New" button in "Edit Environment Variable" popup, and enter the path, where NPM is installed<br />
+        for example<br />
+        C:\Users\Logged-In-User-Id\AppData\Roaming\npm<br />
+        •	Now run the following command to install angular cli<br />
+        npm install -g @angular/cli<br />
+5.	If npm install is successful then run <br />
+	ng serve --open  to execute and open the browser window.<br /><br />
 
 
-To setup backend environment:
-    •	After cloning
-    •	Install MongoDB in your system:
-    •	Download MongoDB from
-    https://www.mongodb.com/download-center/community
-    •	Set the environment path variable
+## To setup backend environment:
+    •	After cloning<br />
+    •	Install MongoDB in your system:<br />
+    •	Download MongoDB from<br />
+    https://www.mongodb.com/download-center/community<br />
+    •	Set the environment path variable<br />
     Click on “New” button in “Edit Environment Variable” popup, and enter the path, where mongoDB’s bin folder is present.
-    For example:
-    C:\Program Files\MongoDB\Server\4.2\bin
-    •	Go to extensions in Visual Studio Code and Install
-    Azure Cosmos DB
-    •	 After installing a triangular icon of Azure will appear on left sidebar. Click on it.
-    •	Click Attach database account
-    •	Select Azure for mongo API
-    •	A connection string “mongodb://127.0.0.1:27017” will appear by default. Click enter
-    •	Go into Photogallery-authentication folder and run
-    npm install
-    •	If no error occurs Proceed and run npm start
+    For example:<br />
+    C:\Program Files\MongoDB\Server\4.2\bin<br />
+    •	Go to extensions in Visual Studio Code and Install<br />
+    Azure Cosmos DB<br />
+    •	 After installing a triangular icon of Azure will appear on left sidebar. Click on it.<br />
+    •	Click Attach database account<br />
+    •	Select Azure for mongo API<br />
+    •	A connection string “mongodb://127.0.0.1:27017” will appear by default. Click enter<br />
+    •	Go into Photogallery-authentication folder and run<br />
+    npm install<br />
+    •	If no error occurs Proceed and run npm start<br />
 
-    
-Common Errors and FAQs:
-1.	Facing Error during ng serve
-=>Data path ".builders['app-shell']" should have required property 'class'.
-=>Cannot find module '@angular/compiler-cli/ngcc'
-=>Could not find the implementation for builder @angular-devkit/build-angular:dev-server
-Solution: Run these commands
-	npm uninstall @angular-devkit/build-angular
-	npm install @angular-devkit/build-angular@0.13.0
+
+## Common Errors and FAQs:
+1.	Facing Error during ng serve<br />
+=>Data path ".builders['app-shell']" should have required property 'class'.<br />
+=>Cannot find module '@angular/compiler-cli/ngcc'<br />
+=>Could not find the implementation for builder @angular-devkit/build-angular:dev-server<br />
+Solution: Run these commands<br />
+	npm uninstall @angular-devkit/build-angular<br />
+	npm install @angular-devkit/build-angular@0.13.0<br />
 
 
 
