@@ -14,33 +14,12 @@
         <h2 class="text-primary text-center">Sign Up</h2>
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="username">Name</label>
+            <label for="staffId">Staff Id</label>
             <input
-              type="text"
-              id="username"
+              type="number"
+              id="staffId"
               class="form-control"
-              formControlName="userName"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              class="form-control"
-              formControlName="email"
-            />
-            <span *ngIf="!email.valid && email.touched" class="help-block"
-              >Please enter a valid email!</span
-            >
-          </div>
-          <div class="form-group">
-            <label for="dateOfBirth">Date Of Birth</label>
-            <input
-              type="date"
-              id="dateOfBirth"
-              class="form-control"
-              formControlName="dateOfBirth"
+              formControlName="staffId"
             />
           </div>
           <div formGroupName="passwordGroup">

@@ -22,50 +22,68 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  signup(email: string, password: string) {
-    return this.http
-      .post<AuthResponseData>(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA-AsE58E63Ts_46gL8FYMsMehIhDTy5Ng",
-        {
-          email: email,
-          password: password,
-          returnSecureToken: true,
-        }
-      )
-      .pipe(
-        catchError(this.handleError),
-        tap((resData) => {
-          this.handleAuthentication(
-            resData.email,
-            resData.localId,
-            resData.idToken,
-            +resData.expiresIn
-          );
-        })
-      );
+  signup(staffId: number, password: string) {
+
+    let backendUrl="http://localhost:7000/"
+    let credentials={
+      staffId:staffId,
+      password:password
+    }
+    console.log(credentials)
+    return this.http.post(backendUrl+'employee',credentials)
+    // return this.http
+    //   .post<AuthResponseData>(
+    //     "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA-AsE58E63Ts_46gL8FYMsMehIhDTy5Ng",
+    //     {
+    //       email: email,
+    //       password: password,
+    //       returnSecureToken: true,
+    //     }
+    //   )
+    //   .pipe(
+    //     catchError(this.handleError),
+    //     tap((resData) => {
+    //       this.handleAuthentication(
+    //         resData.email,
+    //         resData.localId,
+    //         resData.idToken,
+    //         +resData.expiresIn
+    //       );
+    //     })
+    //   );
+
   }
 
-  login(email: string, password: string) {
-    return this.http
-      .post<AuthResponseData>(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA-AsE58E63Ts_46gL8FYMsMehIhDTy5Ng",
-        {
-          email: email,
-          password: password,
-          returnSecureToken: true,
-        }
-      )
-      .pipe(
-        catchError(this.handleError),
-        tap((resData) => {
-          this.handleAuthentication(
-            resData.email,
-            resData.localId,
-            resData.idToken,
-            +resData.expiresIn
-          );
-        })
-      );
+  login(staffId: number, password: string) {
+    let backendUrl="http://localhost:7000/"
+    let credentials={
+      staffId:staffId,
+      password:password
+    }
+    return this.http.post(backendUrl+'employee/verify',credentials)
+
+    // return this.http
+    //   .post<AuthResponseData>(
+    //     "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA-AsE58E63Ts_46gL8FYMsMehIhDTy5Ng",
+    //     {
+    //       email: email,
+    //       password: password,
+    //       returnSecureToken: true,
+    //     }
+    //   )
+    //   .pipe(
+    //     catchError(this.handleError),
+    //     tap((resData) => {
+    //       this.handleAuthentication(
+    //         resData.email,
+    //         resData.localId,
+    //         resData.idToken,
+    //         +resData.expiresIn
+    //       );
+    //     })
+    //   );
+
+
   }
 
   private handleError(errorRes: HttpErrorResponse) {

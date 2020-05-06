@@ -13,7 +13,6 @@ import { AuthService } from "../services/auth-service";
   styleUrls: ["./sign-up.component.css"],
 })
 export class SignUpComponent implements OnInit {
-  genders = ["Male", "Female"];
 
   isLoading: Boolean = false;
   error: string = null;
@@ -25,18 +24,12 @@ export class SignUpComponent implements OnInit {
   formGroup: FormGroup;
   password: AbstractControl;
   confirmPassword: AbstractControl;
-  userName: AbstractControl;
-  email: AbstractControl;
-  dateOfBirth: AbstractControl;
-  gender: AbstractControl;
+  staffId: AbstractControl;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.userName = new FormControl("Arpan", Validators.required);
-    this.email = new FormControl(null, [Validators.required, Validators.email]);
-    this.dateOfBirth = new FormControl(null, Validators.required);
-    this.gender = new FormControl("Male");
+    this.staffId = new FormControl(null, Validators.required);
     this.password = new FormControl(null, [
       Validators.required,
       Validators.minLength(8),
@@ -53,15 +46,12 @@ export class SignUpComponent implements OnInit {
     );
 
     this.signUpForm = new FormGroup({
-      userName: this.userName,
-      email: this.email,
-      dateOfBirth: this.dateOfBirth,
-      gender: this.gender,
+      staffId: this.staffId,
       passwordGroup: this.formGroup,
     });
 
     // this.signUpForm = new FormGroup({
-    //   userName: new FormControl(null, Validators.required),
+    //   staffId: new FormControl(null, Validators.required),
     //   email: new FormControl(null, [Validators.required, Validators.email]),
     //   passwordGroup: new FormGroup(
     //     {
@@ -82,11 +72,11 @@ export class SignUpComponent implements OnInit {
     if (!this.signUpForm.valid) {
       return;
     }
-    const email = this.signUpForm.value.email;
+    const staffId = this.signUpForm.value.staffId;
     const password = this.signUpForm.value.passwordGroup.password;
-    //console.log(this.signUpForm.value.userName);
+    //console.log(this.signUpForm.value.staffId);
     this.isLoading = true;
-    this.authService.signup(email, password).subscribe(
+    this.authService.signup(staffId, password).subscribe(
       (data) => {
         console.log(data);
         this.isLoading = false;
