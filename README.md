@@ -33,23 +33,24 @@
 
 
 ## To setup backend environment:
-    •	After cloning<br />
-    •	Install MongoDB in your system:<br />
-    •	Download MongoDB from<br />
-    https://www.mongodb.com/download-center/community<br />
-    •	Set the environment path variable<br />
+
+    •	After cloning 
+    •	Install MongoDB in your system:
+    •	Download MongoDB from
+    https://www.mongodb.com/download-center/community
+    •	Set the environment path variable
     Click on “New” button in “Edit Environment Variable” popup, and enter the path, where mongoDB’s bin folder is present.
-    For example:<br />
-    C:\Program Files\MongoDB\Server\4.2\bin<br />
-    •	Go to extensions in Visual Studio Code and Install<br />
-    Azure Cosmos DB<br />
-    •	 After installing a triangular icon of Azure will appear on left sidebar. Click on it.<br />
-    •	Click Attach database account<br />
-    •	Select Azure for mongo API<br />
-    •	A connection string “mongodb://127.0.0.1:27017” will appear by default. Click enter<br />
-    •	Go into Photogallery-authentication folder and run<br />
-    npm install<br />
-    •	If no error occurs Proceed and run npm start<br />
+    For example:
+    C:\Program Files\MongoDB\Server\4.2\bin
+    •	Go to extensions in Visual Studio Code and Install
+    Azure Cosmos DB
+    •	 After installing a triangular icon of Azure will appear on left sidebar. Click on it.
+    •	Click Attach database account
+    •	Select Azure for mongo API
+    •	A connection string “mongodb://127.0.0.1:27017” will appear by default. Click enter
+    •	Go into Photogallery-authentication folder and run
+    npm install
+    •	If no error occurs Proceed and run npm start
 
 
 ## Common Errors and FAQs:
